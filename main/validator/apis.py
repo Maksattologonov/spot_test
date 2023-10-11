@@ -6,3 +6,7 @@ class FormulaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Formula
         fields = ('formula',)
+
+
+class FormulaValidationSerializer(serializers.Serializer):
+    formula = serializers.CharField()

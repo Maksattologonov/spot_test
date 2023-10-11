@@ -10,4 +10,10 @@ class Formula(models.Model):
     class Meta:
         verbose_name = 'Формула'
         verbose_name_plural = 'Формулы'
-        
+
+
+class QueryLog(models.Model):
+    timestamp = models.DateTimeField(auto_now_add=True)
+    source_ip = models.GenericIPAddressField()
+    input_data = models.TextField()
+    result = models.BooleanField()
